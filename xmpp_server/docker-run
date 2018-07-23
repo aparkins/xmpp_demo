@@ -1,0 +1,1 @@
+docker run -it --net=host aparkinson/xmpp_server:latest
