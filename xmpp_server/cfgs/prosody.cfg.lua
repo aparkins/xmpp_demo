@@ -91,7 +91,7 @@ modules_disabled = {
 
 -- Disable account creation by default, for security
 -- For more information see https://prosody.im/doc/creating_accounts
-allow_registration = false
+allow_registration = true;
 
 -- Debian:
 --   send the server to background.
@@ -179,6 +179,7 @@ archive_expires_after = "1w" -- Remove archived messages after 1 week
 log = {
 	-- Log files (change 'info' to 'debug' for debug logs):
 	info = "/var/log/prosody/prosody.log";
+    debug = "/var/log/prosody/prosody.debug";
 	error = "/var/log/prosody/prosody.err";
 	-- Syslog:
 	{ levels = { "error" }; to = "syslog";  };
@@ -202,8 +203,8 @@ certificates = "certs"
 -- You need to add a VirtualHost entry for each domain you wish Prosody to serve.
 -- Settings under each VirtualHost entry apply *only* to that host.
 
---VirtualHost "example.com"
---	certificate = "/path/to/example.crt"
+VirtualHost "aparkinson.net"
+    authentication = "internal_plain"
 
 ------ Components ------
 -- You can specify components to add hosts that provide special services,
