@@ -13,3 +13,4 @@ COPY certs/aparkinson.net.key /var/lib/prosody/aparkinson.net.key
 RUN prosodyctl --root cert import aparkinson.net /var/lib/prosody/
 
 RUN prosodyctl register woodhouse aparkinson.net password
+RUN prosodyctl register bottington aparkinson.net password
